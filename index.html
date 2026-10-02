@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name | Software, AI and Data Portfolio</title>
+  <meta name="description" content="Fresher in software engineering, AI engineering, data science and data analytics. Projects, skills and a chatbot that answers recruiter questions." />
+
+  <!-- Fonts: Instrument Serif for headings, Figtree for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="#top" class="brand" data-fill="name">Your Name</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">Menu</button>
+      <nav class="nav-links" id="nav-links" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#profiles">Profiles</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="btn btn-clay btn-small">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <p class="status"><span class="dot"></span>Open to fresher roles</p>
+          <h1>Code, models and data,<br /><em>built to run for real.</em></h1>
+          <p class="lead">
+            Hi, I'm <span data-fill="name">Your Name</span>. I'm a fresher in software engineering,
+            AI engineering, data science and data analytics. I like taking a problem from raw data to a working result.
+          </p>
+          
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-dark">See my projects</a>
+            <button class="btn btn-line" id="hero-chat">Ask my chatbot</button>
+            <a href="assets/Hariom_Pandey_Resume.pdf" class="btn btn-line" target="_blank" rel="noopener">Resume</a>
+          </div>
+        </div>
+
+        <div class="photo-frame">
+          <!-- Put your photo at assets/profile.jpg. If it is missing, initials show instead. -->
+          <img src="assets/Myprofile.jpg" alt="Portrait of the portfolio owner" id="profile-img" />
+          <div class="photo-fallback" id="photo-fallback" aria-hidden="true">YN</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILL MARQUEE ============ -->
+    <div class="marquee" aria-label="Technologies I work with">
+      <div class="marquee-track" id="marquee-track"></div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about">
+      <div class="wrap about-grid">
+        <div>
+          <h2>About me</h2>
+          <p class="body-text" id="about-bio"></p>
+          <p class="body-text">
+            <strong>Looking for:</strong> <span id="about-roles"></span>.
+          </p>
+          <p class="body-text"><strong>Based in:</strong> <span id="about-location"></span></p>
+        </div>
+        <div class="about-card">
+          <h3>Education</h3>
+          <div id="education-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section projects" id="projects">
+      <div class="wrap">
+        <h2 class="center">Recent <em>projects</em></h2>
+        <p class="center sub">Kaggle competitions, a RAG app and full-stack builds.</p>
+        <div class="project-grid" id="project-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience">
+      <div class="wrap narrow">
+        <h2>Experience</h2>
+        <div id="experience-list" class="timeline"></div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section skills" id="skills">
+      <div class="wrap">
+        <h2>Skills</h2>
+        <div class="skill-grid" id="skill-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============ PROFILES (LeetCode, GFG, LinkedIn...) ============ -->
+    <section class="section profiles" id="profiles">
+      <div class="wrap">
+        <h2 class="center">Find me <em>online</em></h2>
+        <div class="link-grid" id="link-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq">
+      <div class="wrap faq-grid">
+        <h2>Questions <em>recruiters ask</em></h2>
+        <div id="faq-list" class="faq-list"></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="wrap center">
+        <h2>Let's talk about <em>your team.</em></h2>
+        <p class="sub" id="contact-availability"></p>
+        <a href="#" class="btn btn-clay" id="contact-mail">Send an email</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <span class="brand" data-fill="name">Your Name</span>
+        <span class="footer-note">© <span id="year"></span> All rights reserved</span>
+      </div>
+      <div class="footer-links" id="footer-links"></div>
+    </div>
+  </footer>
+
+  <!-- ============ CHATBOT ============ -->
+  <button class="chat-toggle" id="chat-toggle" aria-expanded="false" aria-controls="chat-panel">Ask about me</button>
+
+  <section class="chat-panel" id="chat-panel" aria-label="Chat about me" hidden>
+    <div class="chat-head">
+      <div>
+        <strong>Ask about me</strong>
+        <span>Answers come from my portfolio</span>
+      </div>
+      <button class="chat-close" id="chat-close" aria-label="Close chat">Close</button>
+    </div>
+    <div class="chat-log" id="chat-log" role="log" aria-live="polite"></div>
+    <div class="chat-chips" id="chat-chips"></div>
+    <form class="chat-form" id="chat-form" autocomplete="off">
+      <input id="chat-input" type="text" placeholder="Ask about skills, projects, contact" aria-label="Your question" />
+      <button type="submit" class="btn btn-clay btn-small">Send</button>
+    </form>
+  </section>
+
+  <!-- Order matters: data first, then the page code, then the chatbot -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>
