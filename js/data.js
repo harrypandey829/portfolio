@@ -36,7 +36,7 @@ window.PORTFOLIO = {
     {
       title: "Data Analytics Intern",
       org: "Infinity Learn",
-      period: "EDIT: Month Year – Month Year",
+      period: "Sep 2025 - April 2026",
       points: [
         "Wrote advanced SQL queries and built Metabase dashboards that turned student data into clear, usable reports.",
         "Worked with a Snowflake data lake, moving data in with Airbyte pipelines and shaping it with dbt transformations.",
